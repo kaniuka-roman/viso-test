@@ -12,7 +12,7 @@ const RecipeSelectionContext = createContext<RecipeSelectionContextType | undefi
 
 export function RecipeSelectionProvider({ children }: { children: ReactNode }) {
 	const [selectedRecipes, setSelectedRecipes] = useState<Recipe[]>(
-		JSON.parse(localStorage.getItem('selectedRecipes') || '') || [],
+		JSON.parse(localStorage.getItem('selectedRecipes') || '[]') || [],
 	)
 
 	useEffect(() => {
